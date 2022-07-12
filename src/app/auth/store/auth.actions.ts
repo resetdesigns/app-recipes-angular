@@ -1,3 +1,22 @@
-export const LOGIN = 'LOGIN';
+import { Action } from '@ngrx/store';
 
-export type AuthActions = null;
+export const LOGIN = 'LOGIN';
+export const LOGOUT = 'LOGOUT';
+
+export class Login implements Action {
+  readonly type = LOGIN;
+  constructor(
+    public payload: {
+      email: string;
+      userId: string;
+      token: string;
+      expirationDate: Date;
+    }
+  ) {}
+}
+
+export class Logout implements Action {
+  readonly type = LOGOUT;
+}
+
+export type AuthActions = Login | Logout;
