@@ -12,6 +12,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { TestAlertComponent } from './test-alert/test-alert.component';
 
 import * as fromApp from './store/app.reducer';
 import { AuthEffects } from './auth/store/auth.effects';
@@ -19,7 +20,7 @@ import { environment } from '../environments/environment';
 import { RecipeEffects } from './recipes/store/recipe.effects';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, TestAlertComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
